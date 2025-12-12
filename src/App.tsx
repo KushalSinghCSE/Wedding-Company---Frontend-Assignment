@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-//
-// ----------- Theme Colors (Customize to match your Figma/PDF) -----------
-//
 const theme = {
   bgGradient: "linear-gradient(180deg,#e6f8ff 0%,#d9eefb 50%, #eaf6ff 100%)",
   cardBg: "#f8feff",
@@ -10,9 +7,8 @@ const theme = {
   textDark: "#0f2f3a",
 };
 
-//
-// ----------- Component Types -----------
-//
+// Component Types 
+
 interface QuestionType {
   q: string;
   opts: string[];
@@ -38,9 +34,8 @@ interface FinalScoreProps {
   onRestart: () => void;
 }
 
-//
-// ----------- Layout Wrapper -----------
-//
+// Layout Wrapper 
+
 function QuizLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
@@ -62,9 +57,8 @@ function QuizLayout({ children }: { children: React.ReactNode }) {
   );
 }
 
-//
-// ----------- Progress Bar -----------
-//
+// Progress Bar 
+
 function QuizProgress({ current, total }: { current: number; total: number }) {
   const steps = Array.from({ length: total });
 
@@ -86,9 +80,8 @@ function QuizProgress({ current, total }: { current: number; total: number }) {
   );
 }
 
-//
-// ----------- Question Card -----------
-//
+// Question Card 
+
 function QuestionCard({
   question,
   options,
@@ -123,9 +116,8 @@ function QuestionCard({
   );
 }
 
-//
-// ----------- Navigation Buttons -----------
-//
+// Navigation Buttons 
+
 function NavButtons({
   onPrev,
   onNext,
@@ -154,9 +146,8 @@ function NavButtons({
   );
 }
 
-//
-// ----------- Final Score Screen -----------
-//
+// Final Score Screen 
+
 function FinalScore({ scorePercent, onRestart }: FinalScoreProps) {
   return (
     <div className="text-center py-20">
@@ -185,9 +176,8 @@ function FinalScore({ scorePercent, onRestart }: FinalScoreProps) {
   );
 }
 
-//
-// ----------- Main App Component -----------
-//
+// Main App Component 
+
 export default function App() {
   const quiz: QuestionType[] = [
     { q: "1. What sound does a cat make?", opts: ["Bhau-Bhau", "Meow-Meow", "Oink-Oink"], ans: 1 },

@@ -1,4 +1,3 @@
-/* src/index.css */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600&display=swap');
 
 :root{
@@ -8,18 +7,15 @@
   --muted: #6b7b86;
   --primary: #88d1ea;
   --highlight: #dff6fb;
-  --accent: #6b21a8; /* purple for selected outline */
+  --accent: #6b21a8; 
 }
 
-/* make sure tailwind directives are still there */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* small overrides for the bigger headline spacing */
 .font-playfair { font-family: "Playfair Display", serif; }
 .font-inter { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
 
-/* progression block thickness refinement (optional) */
 .progress-track { height: 8px; border-radius: 9999px; }
 .progress-seg { height: 8px; border-radius: 9999px; }
